@@ -23,12 +23,14 @@
 // xxxx.xxxx = byeSpeaker;
 
 
-(function(window) {
-    var speakWord = "Good Bye";
-    var byeSpeaker = function(name) {
-        console.log(speakWord + " " + name);
+(function() {
+    var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula", "Laura", "Jim"];
+    for (var i = 0; i < names.length; i++) {
+        var firstLetter = names[i].charAt(0).toLowerCase();
+        if (firstLetter === 'j') {
+            byeSpeaker.speak(names[i]);
+        } else {
+            helloSpeaker.speak(names[i]);
+        }
     }
-
-    window.byeSpeaker = byeSpeaker;
-
-})(window);
+})();
